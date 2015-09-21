@@ -1,21 +1,37 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            storeFile file('/home/marcelo/AndroidStudioProjects/Keys/scannerAnimal.jks')
+            keyAlias 'scanner'
+            keyPassword 'maxwel'
+            storePassword 'maxwel'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion "23.0.0"
-
     defaultConfig {
         applicationId "com.wordpress.marcellonascimento.detectoranimal"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.config
         }
+        debug {
+            jniDebuggable true
+        }
+    }
+    productFlavors {
     }
 }
 

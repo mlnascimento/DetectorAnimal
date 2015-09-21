@@ -1,8 +1,19 @@
 <resources>
-    <string name="app_name">Detector Animal</string>
+    <string name="app_name">Scanner Animal</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_login">Login</string>
+    <string name="action_salvar">Salvar</string>
+    <string name="action_consultar">Consultar</string>
+    <string name="action_excluir">Excluir</string>
+    <string name="action_sair">Sair</string>
+    <string name="logout">Logout</string>
+    <string name="action_cadastro">Cadastro</string>
+
+    <string name="usuarios">Usuários</string>
+
+    <string name="title_activity_login">Scanner Animal</string>
+    <string name="title_activity_cad_usuario">Cadastro de Usuários</string>
+    <string name="title_activity_list_users">Usuários</string>
 
     <!-- Login -->
     <string name="login_txtUsuario"> Usuário</string>
@@ -11,7 +22,49 @@
     <string name="login_ckbConectado">Manter Conectado </string>
 
 
+    <!-- validar -->
     <string name="login_valUser">Informe o usuário. </string>
     <string name="login_valSenha">Informe a senha. </string>
+    <string name="campo_notEmpty">Campo Obrigatório. </string>
+
+    <!-- Mensagens -->
+    <string name="login_msgincorreto">Usuário e/ou senha inválidos.</string>
+
+    <string name="msg_sucesso">Registro Cadastrado com Sucesso</string>
+    <string name="msg_atualizar">Registro Atualizado com Sucesso</string>
+    <string name="msg_error"> Falha ao Cadastrar / Atualizar registro</string>
+
+    <!--Usuarios-->
+
+    <string name="usuario_txtNome">Nome: </string>
+    <string name="usuario_txtLogin">Login: </string>
+    <string name="usuario_txtSenha">Senha: </string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="lista_usuarios">Lista de Usuários</string>
+
+    <string name="action_scanner">Scanner</string>
+    <string name="action_mostrar_todos">Todos</string>
+    <string name="AtualizarUsuario">Atualizar Usuário</string>
+
+
+    <!-- animais -->
+    <string name="title_activity_cad_animal">Cadastro de Animais</string>
+    <string name="animal_txtNome">Nome: </string>
+    <string name="animal_txtGenero">Gênero: </string>
+    <string name="animal_txtEspecie">Espécie: </string>
+    <string name="animal_txtNomepopular">Nome Popular: </string>
+    <string name="animal_txtHabitat">Habitat: </string>
+    <string name="animal_txtFoto">Foto: </string>
+    <string name="title_activity_list_animals">Animais</string>
+    <string name="AtualizarAnimal">Atualizar Animal</string>
+    <string name="Foto">Tirar Foto</string>
+    <string name="buscarFoto"> Buscar Foto</string>
+    <string name="title_activity_scanner">Scanear Animal</string>
+    <string name="localizarAnimal">Identificar</string>
+
+    <string name="vizualizarAnimal">Ver Animal</string>
+    <string name="msg_animalNaoexiste">Animal não identificado</string>
 
 </resources>

@@ -1,0 +1,104 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.wordpress.marcellonascimento.detectoranimal.CadAnimalActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        style="@style/Campos"
+        android:text="@string/animal_txtNome" />
+
+    <EditText
+        android:id="@+id/animal_edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+    <TextView
+        style="@style/Campos"
+        android:text="@string/animal_txtGenero" />
+
+    <EditText
+        android:id="@+id/animal_edtGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+    <TextView
+        style="@style/Campos"
+        android:text="@string/animal_txtEspecie" />
+
+    <EditText
+        android:id="@+id/animal_edtEspecie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+    <TextView
+        style="@style/Campos"
+        android:text="@string/animal_txtNomepopular" />
+
+    <EditText
+        android:id="@+id/animal_edtNomepopular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+    <TextView
+        style="@style/Campos"
+        android:text="@string/animal_txtHabitat" />
+
+    <EditText
+        android:id="@+id/animal_edtHabitat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"/>
+
+    <TextView
+        style="@style/Campos"
+        android:text="Caminho Foto" />
+
+    <EditText
+        android:id="@+id/animal_edtFoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"/>
+
+
+    <TextView
+        style="@style/Campos"
+        android:text="@string/animal_txtFoto" />
+
+  <!--  <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Foto"
+        android:id="@+id/btnFoto"
+        android:onClick="tirarFoto"/>
+-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/buscarFoto"
+        android:id="@+id/btnBuscarFoto"
+        android:onClick="buscarFoto" />
+
+    <ImageView
+        android:id="@+id/animal_imgFoto"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:inputType="text"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:background="#cfffb8" />
+
+</LinearLayout>
+
+</ScrollView>

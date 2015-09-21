@@ -41,7 +41,7 @@ public class UserDAO {
 
     public List<User> listarUsers(){
         Cursor cursor = getDatabase().query(DatabaseHelper.Users.TABELA,
-                DatabaseHelper.Users.COLUNAS, null, null, null, null, null);
+                DatabaseHelper.Users.COLUNAS, null, null, null, null, "nome ASC");
 
         List<User> users = new ArrayList<User>();
         while (cursor.moveToNext()){

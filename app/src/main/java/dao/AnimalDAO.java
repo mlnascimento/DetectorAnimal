@@ -35,14 +35,16 @@ public class AnimalDAO {
                 cursor.getString(cursor.getColumnIndex(DatabaseHelper.Animals.GENERO)),
                 cursor.getString(cursor.getColumnIndex(DatabaseHelper.Animals.ESPECIE)),
                 cursor.getString(cursor.getColumnIndex(DatabaseHelper.Animals.NOME_POPULAR)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Animals.HABITAT))
+                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Animals.HABITAT)),
+                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Animals.FOTO))
                 );
         return model;
     }
 
     public List<Animal> listarAnimals(){
+        //String order = "nome DESC";
         Cursor cursor = getDatabase().query(DatabaseHelper.Animals.TABELA,
-                DatabaseHelper.Animals.COLUNAS, null, null, null, null, null);
+                DatabaseHelper.Animals.COLUNAS, null, null, null, null, "nome DESC");
 
         List<Animal> animals = new ArrayList<Animal>();
         while (cursor.moveToNext()){
@@ -60,6 +62,7 @@ public class AnimalDAO {
         valores.put(DatabaseHelper.Animals.ESPECIE, animal.getEspecie());
         valores.put(DatabaseHelper.Animals.NOME_POPULAR, animal.getNome_popular());
         valores.put(DatabaseHelper.Animals.HABITAT, animal.getHabitat());
+        valores.put(DatabaseHelper.Animals.FOTO, animal.getFoto());
 
         if (animal.get_id() != null){
             return getDatabase().update(DatabaseHelper.Animals.TABELA, valores,
@@ -76,7 +79,7 @@ public class AnimalDAO {
 
     public Animal buscarAnimalPorId(int id){
         Cursor cursor = getDatabase().query(DatabaseHelper.Animals.TABELA,
-                DatabaseHelper.Animals.COLUNAS,"_id = ?" , new String[]{Integer.toString(id)}, null, null, null);
+                DatabaseHelper.Animals.COLUNAS,"_id = ?" , new String[]{Integer.toString(id)}, null, null,null);
 
         if (cursor.moveToNext()){
             Animal model = criarAnimal(cursor);

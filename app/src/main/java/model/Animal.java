@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.Blob;
+
 /**
  * Created by marcelo on 10/09/15.
  */
@@ -10,16 +12,19 @@ public class Animal {
     private String especie;
     private String nome_popular;
     private String habitat;
+    private String foto;
 
     public Animal(){}
 
-    public Animal(Integer id, String nome, String genero, String especie, String nome_popular, String habitat){
+
+    public Animal(Integer id, String nome, String genero, String especie, String nome_popular, String habitat, String foto){
         this._id = id;
         this.nome = nome;
         this.genero = genero;
         this.especie = especie;
         this.nome_popular = nome_popular;
         this.habitat = habitat;
+        this.foto = foto;
 
     }
 
@@ -69,5 +74,13 @@ public class Animal {
 
     public void setHabitat(String habitat) {
         this.habitat = habitat;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }

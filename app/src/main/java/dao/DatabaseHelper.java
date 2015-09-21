@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.sql.Blob;
+
 /**
  * Created by marcelo on 10/09/15.
  */
@@ -26,7 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Tabela de Animais
         db.execSQL("create table animals (_id integer primary key autoincrement, "
                     + "nome text not null, genero text not null, especie text not null, "
-                    + "nome_popular text not null, habitat text not null");
+                    + "nome_popular text not null, habitat text not null, foto blob)");
 
         //Cadastro de Usuário Inicial
         db.execSQL("insert into users (nome, login, senha) values ('Administrador', 'admin', '123456')");
@@ -58,9 +60,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         public static final String ESPECIE = "especie";
         public static final String NOME_POPULAR = "nome_popular";
         public static final String HABITAT = "habitat";
+        public static final String FOTO  =  "foto";
 
         public static final String[] COLUNAS = new String[]{
-                _ID, NOME, GENERO, ESPECIE, NOME_POPULAR, HABITAT
+                _ID, NOME, GENERO, ESPECIE, NOME_POPULAR, HABITAT, FOTO
         };
+
     }
 }

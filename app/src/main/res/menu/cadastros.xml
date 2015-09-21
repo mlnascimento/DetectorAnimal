@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_menu_salvar"
+        android:title="@string/action_salvar"
+        android:orderInCategory="100"
+        android:icon="@mipmap/save"
+        app:showAsAction="ifRoom|withText" />
+
+    <item android:id="@+id/action_menu_excluir"
+        android:title="@string/action_excluir"
+        android:orderInCategory="100"
+        android:visible="false"
+        android:icon="@mipmap/delete"
+        app:showAsAction="ifRoom|withText" />
+
+    <item android:id="@+id/action_menu_sair"
+        android:title="@string/action_sair"
+        android:orderInCategory="100"
+        android:icon="@mipmap/exit" />
+</menu>
